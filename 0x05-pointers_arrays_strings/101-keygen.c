@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	cahr password[48];
+	char password[48];
 	int index = 0, sum = 0, diff_half1, diff_half2;
 
 	srand(time(0));
@@ -42,12 +42,12 @@ int main(void)
 		{
 			if (password[index] >= (33 + diff_half2))
 			{
-				passwoed[index] -= diff_half2;
+				password[index] -= diff_half2;
 				break;
 			}
 		}
 	}
 
-	printf("%S", password);
+	printf("%s", password);
 	return (0);
 }
