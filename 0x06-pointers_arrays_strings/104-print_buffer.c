@@ -37,8 +37,9 @@ void printHEXES(char *b, int start, int end)
 	}
 }
 
-/** printASCII - print ascii values for string b,
- * formatted to replace jpgj chars with '.'
+/**
+ * printASCII - print ascii values for string b,
+ * formatted to replace nonprintable chars with '.'
  * @b: string to print
  * @start: starting position
  * @end: ending position
@@ -58,7 +59,8 @@ void printASCII(char *b, int start, int end)
 	}
 }
 
-/** print_buffer - prints s buffer
+/**
+ * print_buffer - prints s buffer
  * @b: stirng
  * @size: size of buffer
  */
