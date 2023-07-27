@@ -3,8 +3,8 @@
 
 /**
  * isprintableASCII - determines if s is printable ASCII
- * @n integer
- * Return 1 is tue, 0 is dalse
+ * @n: integer
+ * Return: 1 is tue, 0 is dalse
  *
  */
 
