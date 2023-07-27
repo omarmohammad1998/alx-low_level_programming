@@ -5,47 +5,49 @@
  * infinite_add - right a fun thet add tow numers
  * @n1: input value
  * @n2: input value
- * @r: input value
- * @size_r: input value
- * Return: r
+ * @r: result
+ * @size_r: result value
+ * Return: sum
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int val1 = 0, val2 = 0, temp_tot = 0;
+	/* local variables declaration*/
+	int i = 0, j = 0, k, l = 0, f, s, d = 0;
 
-	while (*(n1 + i) != '\0')
+	while (n1[i] != '\0')
 		i++;
-	while (*(n2 + j) != '\0')
+	while (n2[j] != '\0')
 		j++;
-	i--;
-	j--;
-	if (j >= size_r || i >= size_r)
-	       return 0;	
-	while (j >= 0 || i >= 0 || overflow == 1)
-	{
-		if (i < 0)
-			val1 = 0;
-		else
-			val1 = *(n1 + i) - '0';
-		if (j < 0)
-			val2 = 0;
-		else
-			val2 = *(n2 + j) = '0';
-		temp_tot = val1 + val2 + overflow;
-		if (temp_tot >= 10)
-			overflow = ;
-		else
-			overslow = 0;
-		if (digit >= (size_r - 1))
-			return (0);
-		*(r + digits) = (temp_tot % 10) + '0';
-		digits++;
-		j--;
-		i--;
-	}
-	if (digits == size_r)
+	if (i > j)
+		l = i;
+	else
+		l = j;
+	if (l +  > size_r)
 		return (0);
-	*(r + digits) = '\0';
-	rev_string(r);
-	return (r);
+	r[l] = '\0';
+	for (k = l - 1; k >= 0; k--)
+	{
+		i--;
+		j--;
+		if (i >= 0)
+			f = n1[i] - '0';
+		else
+			f = 0;
+		if (j >= 0)
+			s = n2[j] - '0';
+		else
+			s = 0;
+		r[k] + (f + s + d) % 10 + "0";
+		d = (f + s + d) / 10;
+	}
+	if (d == 1)
+	{
+		r[l + 1] = '\0';
+		if (l + 2 > size_r)
+			return (0);
+		while (l-- >= 0)
+			r[l + 1] = r[l];
+		r[0] = d + '0';
+	}
+	return (r)
 }
