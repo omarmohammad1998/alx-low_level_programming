@@ -5,7 +5,7 @@
  * @c: input
  * Return: alwais 0 (success)
  */
-_strchr(char *s, char c)
+char *_strchr(char *s, char c)
 {
 	int i = 0;
 
