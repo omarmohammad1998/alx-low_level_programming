@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlip.h>
+#include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
 /**
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 	{
 		if (check_num(argv[count]))
 		{
-			str_to_int = atio(argv[count]); /*ATIO --> convert string to int*/
+			str_to_int = atoi(argv[count]); /*ATOI --> convert string to int*/
 			sum += str_to_int;
 		}
 		/*condition if one of */
