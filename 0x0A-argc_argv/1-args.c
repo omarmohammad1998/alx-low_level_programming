@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * main - print the num 
+ * main - print the num
  * @argc: num of
  * @argv: array of
  *
