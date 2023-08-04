@@ -2,12 +2,12 @@
 #include "main.h"
 
 /**
- * _atio - converts a s
+ * _atoi - converts a s
  * @s: str to be
  *
  * Returns: the int concer
  */
-int _atio(char *s)
+int _atoi(char *s)
 {
 	int i, d, n, len, f, digit;
 
@@ -61,9 +61,9 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	num1 = _atio(argv[1]);
-	num2 = _atio(argv[2]);
-	result = num1 + num2;
+	num1 = _atoi(argv[1]);
+	num2 = _atoi(argv[2]);
+	result = num1 * num2;
 
 	printf("%d\n", result);
 
