@@ -5,7 +5,7 @@
  * _atoi - converts a s
  * @s: str to be
  *
- * Returns: the int concer
+ * Return: the int concer
  */
 int _atoi(char *s)
 {
