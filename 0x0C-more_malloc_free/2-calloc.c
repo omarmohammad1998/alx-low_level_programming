@@ -6,17 +6,19 @@
  * @s: pointer to put the cont
  * @b: cost
  * @n: max bytes to use
+ *
  * Return: s
  */
-
 char *_memset(char *s, char b, unsigned int n)
 {
-	char *ptr = s;
+	unsigned int i;
 
-	while (n--)
-		*s++ = b;
+	for (i = 0; i < n; i++)
+	{
+		s[i] = b;
+	}
 
-	return (ptr);
+	return (s);
 }
 
 /**
@@ -28,16 +30,17 @@ char *_memset(char *s, char b, unsigned int n)
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *m;
+	char *btr;
 
-	if (size == 0 || nmemb == 0)
-		return (NULL);
-	m = malloc(sizeof(int) * nmemb);
-
-	if (m == 0)
+	if (nmem == 0 || size == 0)
 		return (NULL);
 
-	_memset(m, 0, sizeof(int) * nmemb);
+	ptr = malloc(size * nmemb);
 
-	return (m);
+	if (ptr == NULL)
+		return (NULL);
+
+	_memset(ptr, 0, nmem * size);
+
+	return (ptr);
 }
