@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * *_realloc - allocates a memory
@@ -6,7 +7,7 @@
  * @old_size: size in pytes
  * @new_size: size in pyets
  *
- * Retrun: NULL if new_size = 0
+ * Retrun: NULL if new_size = 0 ptr is not NULL.
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
