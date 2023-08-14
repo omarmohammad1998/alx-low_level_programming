@@ -52,7 +52,7 @@ char *_strcpy(char *dest, char *src)
  * @name: name of the dog
  * @age: age of the dog
  * @owner: owner of the dog
- * Retrun: printer to the new dog (Success) NULL otherwis
+ * Return: printer to the new dog (Success) NULL otherwis
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
