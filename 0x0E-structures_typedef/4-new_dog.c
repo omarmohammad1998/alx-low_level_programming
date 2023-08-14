@@ -48,13 +48,13 @@ char *_strcpy(char *dest, char *src)
 	return (dest);
 }
 /**
- * new_dog - creates a new dog
+ * *new_dog - creates a new dog
  * @name: name of the dog
  * @age: age of the dog
  * @owner: owner of the dog
- *
- * Retrun: pointer to the new dog (Success), NULL otherwise
+ * Retrun: printer to the new dog (Success) NULL otherwis
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
