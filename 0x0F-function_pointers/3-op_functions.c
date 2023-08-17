@@ -46,7 +46,7 @@ int op_mul(int a, int b)
  *
  * Return: the qout of a and b.
  */
-int op_div(unt a, int b)
+int op_div(int a, int b)
 {
 	return (a  / b);
 }

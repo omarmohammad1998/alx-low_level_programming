@@ -1,5 +1,5 @@
 #include "function_pointers.h"
-#include <stdlib.>
+#include <stdlib.h>
 #include <stdio.h>
 #include "3-calc.h"
 /**
@@ -9,7 +9,7 @@
  *
  * Return: Always 0.
  */
-int main(int __attribute__((__unused__)) arg, char *argv[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	int num1, num2;
 	char *op;
@@ -20,11 +20,11 @@ int main(int __attribute__((__unused__)) arg, char *argv[])
 		exit(98);
 	}
 
-	num1 = atoi(argv[i]);
+	num1 = atoi(argv[1]);
 	op = argv[2];
 	num2 = atoi(argv[3]);
 
-	if (get_op_fun(op) == NULL || op[i] != '\0')
+	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
@@ -35,7 +35,7 @@ int main(int __attribute__((__unused__)) arg, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	printf("%d\n", get_op_fun(op)(num1, num2));
+	printf("%d\n", get_op_func(op)(num1, num2));
 
 	return(0);
 }
