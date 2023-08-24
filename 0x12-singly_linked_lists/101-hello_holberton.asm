@@ -3,7 +3,7 @@ section		.text
 	global	main
 
 main:
-	mov		adi, msg
+	mov		edi, msg
 	mov		eax, 0
 	call	printf
 
