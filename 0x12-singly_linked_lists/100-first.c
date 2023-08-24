@@ -1,6 +1,6 @@
 #include "lists.h"
 
-void _consructor(void) __attribute__ ((constructor));
+void _constructor(void) __attribute__ ((constructor));
 
 /**
  * _constructor - executes before main()
