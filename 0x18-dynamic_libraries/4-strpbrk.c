@@ -1,28 +1,30 @@
 #include "main.h"
-/**
- * _strspn - entry point
- * @s: input
- * @accept: input
- * Return: Always 0 (Success)
- */
-unsigned int _strspn(char *s, char *accept)
-{
-	unsigned int n = 0;
-	int r;
 
-	while (*s)
+/**
+ * _strpbrk - locates the first occurrence in the string s of any
+ * of the bytes in the string accept
+ * @s: for the char
+ * @accept: paramter for accept
+ * Return: pointer to the byte s
+ */
+
+char *_strpbrk(char *s, char *accept)
+{
+	int i, t, j;
+
+	i = 0;
+	while (s[i] != '\0')
 	{
-		for (r = 0; accept[r]; r++)
+		t = 0;
+		for (j = 0; accept[j] != '\0'; j++)
 		{
-			if (*s == accept[r])
-			{
-				n++;
-				break;
-			}
-			else if (accept[r + 1] == '\0')
-				return (n);
+			if (s[i] == accept[j])
+				t = 1;
 		}
-		s++;
+		j = 0;
+		if (t == 1)
+			return (s + i);
+		i++;
 	}
-	return (n);
+	return (0);
 }
